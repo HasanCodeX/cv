@@ -1,0 +1,234 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    font-size: 16px;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 80%;
+    max-width: 1000px;
+    margin: 20px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Header Section */
+header {
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #ddd;
+    margin-bottom: 20px;
+    animation: slideInDown 1s ease-in-out;
+}
+
+header h1 {
+    font-size: 32px;
+    color: #0073e6;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 18px;
+    color: #666;
+}
+
+/* Contact Information */
+.contact-info {
+    margin-bottom: 20px;
+    animation: slideInLeft 1.5s ease-in-out;
+}
+
+.contact-info h2 {
+    font-size: 22px;
+    color: #0073e6;
+    margin-bottom: 10px;
+}
+
+.contact-info ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.contact-info li {
+    padding: 5px 0;
+    font-size: 16px;
+    color: #555;
+}
+
+/* Sections Styling */
+section h2 {
+    font-size: 22px;
+    color: #0073e6;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+}
+
+section p, section ul {
+    margin-left: 20px;
+    margin-bottom: 15px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+section p strong {
+    color: #333;
+}
+
+/* Skills */
+.skills ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.skills li {
+    background: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.skills li:hover {
+    background-color: #0073e6;
+    color: #fff;
+}
+
+/* Blood Donor Profile */
+.blood-donor-profile a {
+    color: #0073e6;
+    text-decoration: none;
+    font-weight: bold;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.blood-donor-profile a:hover {
+    text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInDown {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .container {
+        width: 90%;
+    }
+    
+    header h1 {
+        font-size: 28px;
+    }
+
+    header p {
+        font-size: 16px;
+    }
+
+    section h2 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 24px;
+    }
+
+    header p {
+        font-size: 14px;
+    }
+
+    section h2 {
+        font-size: 18px;
+    }
+
+    .contact-info li {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 20px;
+    }
+
+    header p {
+        font-size: 12px;
+    }
+
+    section h2 {
+        font-size: 16px;
+    }
+
+    .contact-info li {
+        font-size: 12px;
+    }
+
+    .skills ul {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+}
